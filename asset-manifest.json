@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/field-booking/static/css/main.ab96e7ef.css",
+    "main.js": "/field-booking/static/js/main.a3e9dae0.js",
+    "index.html": "/field-booking/index.html",
+    "main.ab96e7ef.css.map": "/field-booking/static/css/main.ab96e7ef.css.map",
+    "main.a3e9dae0.js.map": "/field-booking/static/js/main.a3e9dae0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab96e7ef.css",
+    "static/js/main.a3e9dae0.js"
+  ]
+}
