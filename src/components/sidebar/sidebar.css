@@ -1,0 +1,160 @@
+.sidebar_main .side_panel-nav {
+    background-color: rgba(66, 0, 121, 0.863);
+    width: 275px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+.sidebar_main .nav_open-button {
+    color: #000;
+    background-color: transparent;
+    font-size: 35px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* slide bottom start */
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateX(-70%);
+        transform: translateX(-70%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateX(-70%);
+        transform: translateX(-70%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* Slide bottom Ends */
+.side_panel-nav .sidebar_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.side_panel-nav .sidebar_logo .logo {
+    font-size: 30px;
+    color: #fff;
+}
+
+.side_panel-nav .sidebar_logo .nav_close-button {
+    font-size: 25px;
+    color: #fff !important;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.side_panel-nav .sidebar_links {
+    padding: 10px;
+    height: calc(100vh - 52px);
+    overflow-y: auto;
+}
+
+.side_panel-nav .sidebar_links a {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.4s ease;
+    background-color: rgba(0, 0, 0, 30%);
+    border-radius: 20px;
+}
+
+.side_panel-nav .sidebar_links a:hover {
+    background-color: rgba(223, 0, 156, 0.3);
+
+}
+
+.side_panel-nav .sidebar_links a:hover span .nav_icon {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 30%)
+}
+
+.side_panel-nav .sidebar_links .active span .nav_icon {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 30%)
+}
+
+.side_panel-nav .sidebar_links .active {
+    background-color: rgba(223, 0, 156, 0.3);
+}
+
+.side_panel-nav .sidebar_links a>span {
+    display: flex;
+    align-items: center;
+}
+
+.side_panel-nav .sidebar_links a>span .nav_icon {
+    margin-right: 10px;
+    padding: 7px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+
+/* Custom ScrollBar Css */
+/* width */
+.sidebar_main ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.sidebar_main ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.sidebar_main ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 70%);
+    border-radius: 50%;
+}
+
+/* Handle on hover */
+.sidebar_main ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+
+@media screen and (max-width: 400px) {
+    .sidebar_main .nav_open-button {
+        font-size: 25px;
+    }
+}
