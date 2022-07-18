@@ -82,11 +82,11 @@
 
 .side_panel-nav .sidebar_links a {
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     display: block;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-transform: capitalize;
     text-decoration: none;
     border-bottom: 1px solid transparent;
