@@ -2,11 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const CustomButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-  width: 100%;
+  margin: 10px 15px;
+  width: -webkit-fill-available;
   border: none;
   padding: 10px;
   border-radius: 25px;

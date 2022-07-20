@@ -6,7 +6,10 @@ import ListPanel from "./ListPanel";
 
 const Page_content = styled.div`
   display: flex;
-  margin-top: 15px;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
 `;
 
 const Dashboard = () => {

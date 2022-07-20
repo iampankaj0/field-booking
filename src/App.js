@@ -13,6 +13,7 @@ import Reports from "./components/reports/Report";
 import UserWallet from "./components/userWalletReports/UserWallet";
 import SalesReport from "./components/salesReport/SalesReport";
 import Profile from "./components/profile/Profile";
+import FilterContext from "./context/FilterContext";
 
 const App = () => {
   return (
@@ -20,7 +21,9 @@ const App = () => {
       <Sidebar />
 
       <Switch>
-        <Route exact path="/" component={Dashboard} />
+        <FilterContext>
+          <Route exact path="/" component={Dashboard} />
+        </FilterContext>
         <Route path="/calendar" component={Calendar} />
         <Route path="/fields" component={Fields} />
         <Route path="/admins" component={UserManagement} />

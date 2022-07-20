@@ -7,7 +7,8 @@ const CustomInput = styled.input`
   color: grey;
   border: 1px solid #d8d8d8;
   padding: 10px;
-  width: 95%;
+  margin: 15px 15px 0;
+  width: -webkit-fill-available;
   border-radius: 25px;
   transition: 0.8s;
 

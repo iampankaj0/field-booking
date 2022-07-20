@@ -78,6 +78,7 @@
     padding: 10px;
     height: calc(100vh - 52px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .side_panel-nav .sidebar_links a {
@@ -93,6 +94,10 @@
     transition: 0.4s ease;
     background-color: rgba(0, 0, 0, 30%);
     border-radius: 20px;
+}
+
+.side_panel-nav .sidebar_links a:last-child{
+    margin-bottom: 80px;
 }
 
 .side_panel-nav .sidebar_links a:hover {
@@ -143,13 +148,13 @@
 
 /* Handle */
 .sidebar_main ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 70%);
+    background: #000;
     border-radius: 50%;
 }
 
 /* Handle on hover */
 .sidebar_main ::-webkit-scrollbar-thumb:hover {
-    background: #000;
+    background: #d8d8d8;
 }
 
 
