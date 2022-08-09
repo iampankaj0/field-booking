@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/field-booking/static/css/main.bb725c5f.css",
-    "main.js": "/field-booking/static/js/main.dd5e7560.js",
+    "main.js": "/field-booking/static/js/main.c729f01b.js",
     "index.html": "/field-booking/index.html",
     "main.bb725c5f.css.map": "/field-booking/static/css/main.bb725c5f.css.map",
-    "main.dd5e7560.js.map": "/field-booking/static/js/main.dd5e7560.js.map"
+    "main.c729f01b.js.map": "/field-booking/static/js/main.c729f01b.js.map"
   },
   "entrypoints": [
     "static/css/main.bb725c5f.css",
-    "static/js/main.dd5e7560.js"
+    "static/js/main.c729f01b.js"
   ]
 }
