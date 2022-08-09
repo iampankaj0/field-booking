@@ -5,6 +5,7 @@ import "../../../node_modules/react-super-responsive-table/dist/SuperResponsiveT
 import { bookinglist } from "../../arrays/bookinglist";
 import PaginationList from "react-pagination-list";
 import { myFilterContext } from "../../context/FilterContext";
+import { allBookingContext } from "../../context/BookingContext";
 
 const RightList = styled.div`
   width: calc(100vw - 301px);
@@ -23,7 +24,7 @@ const PanelContent = styled.div`
 `;
 
 const ListPanel = () => {
-  const [bookings, setBookings] = useState(bookinglist);
+  const [bookings, setBookings] = useContext(allBookingContext);
   const [searchTerm, setSearchTerm] = useContext(myFilterContext);
 
   return (
@@ -71,7 +72,7 @@ const ListPanel = () => {
               })
               .map((data, id) => {
                 return (
-                  <Tr>
+                  <Tr key={id}>
                     <Td>
                       <p> {data.date} </p>
                     </Td>

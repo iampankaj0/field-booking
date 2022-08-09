@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { allBookingContext } from "../../context/BookingContext";
 import { myFilterContext } from "../../context/FilterContext";
 import Button from "../../reusableComponents/button/Button";
 import Input from "../../reusableComponents/input/Input";
@@ -21,6 +22,7 @@ const Form = styled.form({});
 
 const LeftPanel = () => {
   const [searchTerm, setSearchTerm] = useContext(myFilterContext);
+  const [bookings, setBookings] = useContext(allBookingContext);
 
   return (
     <LeftMain>
@@ -32,7 +34,7 @@ const LeftPanel = () => {
         />
         <Button type="button" btn_name="Search" />
       </Form>
-      <StatsDetail />
+      <StatsDetail data={bookings.length} />
     </LeftMain>
   );
 };

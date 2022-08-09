@@ -34,7 +34,7 @@ const StatsNumber = styled.p`
   margin: 5px 0;
 `;
 
-const StatsDetail = () => {
+const StatsDetail = ({data}) => {
   return (
     <Section>
       <Stats>
@@ -43,7 +43,7 @@ const StatsDetail = () => {
         <StatsBar>
           <StatsText>today</StatsText>
           <span> - </span>
-          <StatsNumber>1,320</StatsNumber>
+          <StatsNumber>{data} </StatsNumber>
         </StatsBar>
         <StatsBar>
           <StatsText>upcoming</StatsText>

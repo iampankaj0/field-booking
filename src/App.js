@@ -14,6 +14,7 @@ import UserWallet from "./components/userWalletReports/UserWallet";
 import SalesReport from "./components/salesReport/SalesReport";
 import Profile from "./components/profile/Profile";
 import FilterContext from "./context/FilterContext";
+import BookingContext from "./context/BookingContext";
 
 const App = () => {
   return (
@@ -22,17 +23,19 @@ const App = () => {
 
       <Switch>
         <FilterContext>
-          <Route exact path="/field-booking" component={Dashboard} />
-          <Route path="/calendar" component={Calendar} />
-          <Route path="/fields" component={Fields} />
-          <Route path="/admins" component={UserManagement} />
-          <Route path="/fixed-booking" component={FixedBooking} />
-          <Route path="/reports" component={Reports} />
-          <Route path="/user-wallet" component={UserWallet} />
-          <Route path="/sales-report" component={SalesReport} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <BookingContext>
+            <Route exact path="/field-booking" component={Dashboard} />
+            <Route path="/calendar" component={Calendar} />
+            <Route path="/fields" component={Fields} />
+            <Route path="/admins" component={UserManagement} />
+            <Route path="/fixed-booking" component={FixedBooking} />
+            <Route path="/reports" component={Reports} />
+            <Route path="/user-wallet" component={UserWallet} />
+            <Route path="/sales-report" component={SalesReport} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </BookingContext>
         </FilterContext>
         <Redirect to="/" />
       </Switch>
