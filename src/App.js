@@ -22,18 +22,18 @@ const App = () => {
 
       <Switch>
         <FilterContext>
-          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/field-booking" component={Dashboard} />
+          <Route path="/calendar" component={Calendar} />
+          <Route path="/fields" component={Fields} />
+          <Route path="/admins" component={UserManagement} />
+          <Route path="/fixed-booking" component={FixedBooking} />
+          <Route path="/reports" component={Reports} />
+          <Route path="/user-wallet" component={UserWallet} />
+          <Route path="/sales-report" component={SalesReport} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </FilterContext>
-        <Route path="/calendar" component={Calendar} />
-        <Route path="/fields" component={Fields} />
-        <Route path="/admins" component={UserManagement} />
-        <Route path="/fixed-booking" component={FixedBooking} />
-        <Route path="/reports" component={Reports} />
-        <Route path="/user-wallet" component={UserWallet} />
-        <Route path="/sales-report" component={SalesReport} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
         <Redirect to="/" />
       </Switch>
     </div>

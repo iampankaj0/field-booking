@@ -30,67 +30,67 @@ const Sidebar = () => {
             </button>
           </div>
           <div className="sidebar_links">
-            <NavLink exact to="/">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/field-booking">
               <span>
                 <AiFillDashboard className="nav_icon" />
                 Dashboard
               </span>
             </NavLink>
-            <NavLink to="/calendar">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/calendar">
               <span>
                 <CgCalendarToday className="nav_icon" />
                 Calendar
               </span>
             </NavLink>
-            <NavLink to="/fields">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/fields">
               <span>
                 <GiField className="nav_icon" />
                 fileds
               </span>
             </NavLink>
-            <NavLink to="/admins">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/admins">
               <span>
                 <SiManageiq className="nav_icon" />
                 user management
               </span>
             </NavLink>
-            <NavLink to="/fixed-booking">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/fixed-booking">
               <span>
                 <MdGpsFixed className="nav_icon" />
                 Fixed booking
               </span>
             </NavLink>
-            <NavLink to="/reports">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/reports">
               <span>
                 <MdReport className="nav_icon" />
                 reports
               </span>
             </NavLink>
-            <NavLink to="/user-wallet">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/user-wallet">
               <span>
                 <AiTwotoneWallet className="nav_icon" />
                 user wallet report
               </span>
             </NavLink>
-            <NavLink to="/sales-report">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/sales-report">
               <span>
                 <MdPointOfSale className="nav_icon" />
                 Sales report
               </span>
             </NavLink>
-            <NavLink to="/profile">
+            <NavLink onClick={() => setNavToggle(false)} exact to="/profile">
               <span>
                 <CgProfile className="nav_icon" />
                 Profile
               </span>
             </NavLink>
-            {/* <NavLink to="/about">
+            <NavLink onClick={() => setNavToggle(false)} to="/about">
               <span>
                 <RiEmpathizeFill className="nav_icon" />
                 About
               </span>
-            </NavLink> */}
-            <NavLink to="/contact">
+            </NavLink>
+            <NavLink onClick={() => setNavToggle(false)} exact to="/contact">
               <span>
                 <RiContactsBook2Fill className="nav_icon" />
                 Contact

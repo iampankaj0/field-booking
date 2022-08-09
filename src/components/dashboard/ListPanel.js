@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table";
 import styled from "styled-components";
 import "../../../node_modules/react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
@@ -24,7 +24,6 @@ const PanelContent = styled.div`
 
 const ListPanel = () => {
   const [bookings, setBookings] = useState(bookinglist);
-
   const [searchTerm, setSearchTerm] = useContext(myFilterContext);
 
   return (
@@ -43,40 +42,60 @@ const ListPanel = () => {
             </Tr>
           </Thead>
           <Tbody>
-            
-            {bookings.filter((val)=>{
-              if(searchTerm == ""){
-                return val
-              } else if(val.field.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())){
-                return val
-              }
-            }).map((data, id) => {
-              return (
-                <Tr>
-                  <Td>
-                    <p> {data.date} </p>
-                  </Td>
-                  <Td>
-                    <p> {data.time} </p>
-                  </Td>
-                  <Td>
-                    <p> {data.field} </p>
-                  </Td>
-                  <Td>
-                    <p> {data.customer} </p>
-                  </Td>
-                  <Td>
-                    <p> {data.phone} </p>
-                  </Td>
-                  <Td>
-                    <p> {data.invoice} </p>
-                  </Td>
-                  <Td>
-                    <p> {id + 1} </p>
-                  </Td>
-                </Tr>
-              );
-            })}
+            {bookings
+              .filter((val) => {
+                if (searchTerm == "") {
+                  return val;
+                } else if (
+                  val.field
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase()) ||
+                  val.date
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase()) ||
+                  val.time
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase()) ||
+                  val.customer
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase()) ||
+                  val.phone
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase()) ||
+                  val.invoice
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase())
+                ) {
+                  return val;
+                }
+              })
+              .map((data, id) => {
+                return (
+                  <Tr>
+                    <Td>
+                      <p> {data.date} </p>
+                    </Td>
+                    <Td>
+                      <p> {data.time} </p>
+                    </Td>
+                    <Td>
+                      <p> {data.field} </p>
+                    </Td>
+                    <Td>
+                      <p> {data.customer} </p>
+                    </Td>
+                    <Td>
+                      <p> {data.phone} </p>
+                    </Td>
+                    <Td>
+                      <p> {data.invoice} </p>
+                    </Td>
+                    <Td>
+                      <p> {id + 1} </p>
+                    </Td>
+                  </Tr>
+                );
+              })}
           </Tbody>
         </Table>
       </PanelContent>
